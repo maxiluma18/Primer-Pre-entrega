@@ -1,5 +1,5 @@
 // Simulador interactivo para comprar un auto
-const cumpleEdad = (edad, edadPermitida) =>{
+const cumpleEdad = (edad, edadPermitida) =>{//Función Flecha que chequea que la edad del cliente sea mayor o igual a la edad permitida
     if(edad>=edadPermitida){
         return true;
     }else{
@@ -15,7 +15,7 @@ const comprarAuto = (precioAuto, cantidadDinero) => {//Función Flecha que chequ
     }
 }
 
-const colorAutomovil=(colorAuto, auto)=>{
+const colorAutomovil=(colorAuto, auto)=>{//Función Flecha que pinta el auto de un color
     let color;
     let verdadero=true;
     while(verdadero){
@@ -76,12 +76,12 @@ if(cumpleEdad(edad, edadPermitida)){
                         console.log(`\nAhora el ${auto} es tuyo`);
                         activado=false;
                         let colorElegido = parseInt(prompt("Ahora escoge de que color te gustaría que fuera tu auto:\n1.Rojo🔴 \n2.Azul🔵 \n3.Negro⚫ \n4.Blanco⚪"));
-                        let color = colorAutomovil(colorElegido, auto);
+                        let color = colorAutomovil(colorElegido, auto);//color = al color que escogio el usuario
                         console.log(`\nFelicidades ${nombreCliente} 🤑🤑, gracias por su compra del auto ${auto} color ${color}🚗, ya lo puede sacar a pasear, Vuelva pronto!!`);
                         break;
                     }
                 case 2:
-                    if(comprarAuto(3000, cantidadDinero)){
+                    if(comprarAuto(3000, cantidadDinero)){//Si devuelve true sigue, sino va al else
                         auto = "Chevrolet Voyage";
                         alert(`Felicidades el ${auto} es tuyo!! 😎😎😎`)
                         console.log(`\nAhora el ${auto} es tuyo`);
